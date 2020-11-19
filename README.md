@@ -1,6 +1,6 @@
 # Beautiful_Maths
 
-This Project, a collection a small projects will capture graphic views of math in a pure form, taking formulas, identities etc and exploring how they are represented visually. Really nature already provides some beautiful maths for example nautilus shells (Fibonacci numbers) and many more.
+This Project, a collection a small projects which will capture graphic views of math in a pure form; taking formulas, identities etc and exploring how they are represented visually. Really nature already provides some beautiful maths for example nautilus shells (Fibonacci numbers) and many more.
 
 My first project will be from 1983, 'Multiple Angle Graphs'
 
