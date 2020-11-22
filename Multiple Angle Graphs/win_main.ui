@@ -105,7 +105,7 @@
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <widget class="QComboBox" name="comboCode">
+            <widget class="QComboBox" name="comboFunction">
              <property name="geometry">
               <rect>
                <x>10</x>
@@ -124,81 +124,11 @@
               <string/>
              </property>
             </widget>
-            <widget class="QComboBox" name="comboFilter">
-             <property name="geometry">
-              <rect>
-               <x>299</x>
-               <y>10</y>
-               <width>181</width>
-               <height>20</height>
-              </rect>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-            </widget>
-            <widget class="QCheckBox" name="checkBox_Include_Archived">
-             <property name="geometry">
-              <rect>
-               <x>10</x>
-               <y>40</y>
-               <width>158</width>
-               <height>17</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>Include Archived Companies</string>
-             </property>
-            </widget>
-            <widget class="QLineEdit" name="lineEdit">
-             <property name="geometry">
-              <rect>
-               <x>57</x>
-               <y>90</y>
-               <width>161</width>
-               <height>20</height>
-              </rect>
-             </property>
-            </widget>
-            <widget class="QLabel" name="label">
-             <property name="geometry">
-              <rect>
-               <x>11</x>
-               <y>90</y>
-               <width>40</width>
-               <height>16</height>
-              </rect>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>Search</string>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="pushButton_Set_Tags">
-             <property name="geometry">
-              <rect>
-               <x>235</x>
-               <y>37</y>
-               <width>75</width>
-               <height>23</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>Set Tags</string>
-             </property>
-            </widget>
-            <widget class="QCheckBox" name="checkBox_Not_Assessed">
+            <widget class="QCheckBox" name="checkBox_Colour">
              <property name="geometry">
               <rect>
                <x>390</x>
-               <y>40</y>
+               <y>60</y>
                <width>88</width>
                <height>17</height>
               </rect>
@@ -207,13 +137,13 @@
               <string>Select at least Assessed or Not_Assessed</string>
              </property>
              <property name="text">
-              <string>Not Assessed</string>
+              <string>Colourise</string>
              </property>
             </widget>
-            <widget class="QCheckBox" name="checkBox_Assessed">
+            <widget class="QCheckBox" name="checkBox_Fill">
              <property name="geometry">
               <rect>
-               <x>316</x>
+               <x>390</x>
                <y>40</y>
                <width>68</width>
                <height>17</height>
@@ -223,391 +153,96 @@
               <string>Select at least Assessed or Not_Assessed</string>
              </property>
              <property name="text">
-              <string>Assessed</string>
+              <string>Fill</string>
              </property>
             </widget>
-            <widget class="QFrame" name="frame_checkBoxes">
+            <widget class="QProgressBar" name="progressBar">
              <property name="geometry">
               <rect>
-               <x>230</x>
-               <y>70</y>
-               <width>251</width>
-               <height>100</height>
+               <x>10</x>
+               <y>150</y>
+               <width>468</width>
+               <height>15</height>
               </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
-               <height>100</height>
+               <height>15</height>
               </size>
              </property>
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+             <property name="value">
+              <number>0</number>
              </property>
-             <property name="frameShadow">
-              <enum>QFrame::Sunken</enum>
-             </property>
-             <widget class="QCheckBox" name="checkBox_Holdings">
-              <property name="geometry">
-               <rect>
-                <x>10</x>
-                <y>30</y>
-                <width>131</width>
-                <height>17</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Holding</string>
-              </property>
-             </widget>
-             <widget class="QCheckBox" name="checkBox_Almost_No_Interest">
-              <property name="geometry">
-               <rect>
-                <x>100</x>
-                <y>50</y>
-                <width>151</width>
-                <height>17</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Exclude Almost No Interest</string>
-              </property>
-             </widget>
-             <widget class="QCheckBox" name="checkBox_No_Interest">
-              <property name="geometry">
-               <rect>
-                <x>100</x>
-                <y>70</y>
-                <width>141</width>
-                <height>17</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Exclude No Interest</string>
-              </property>
-             </widget>
-             <widget class="QCheckBox" name="checkBox_Watched">
-              <property name="geometry">
-               <rect>
-                <x>10</x>
-                <y>50</y>
-                <width>131</width>
-                <height>17</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Watched</string>
-              </property>
-             </widget>
-             <widget class="QCheckBox" name="checkBox_Some_Interest">
-              <property name="geometry">
-               <rect>
-                <x>100</x>
-                <y>30</y>
-                <width>101</width>
-                <height>17</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Some Interest</string>
-              </property>
-             </widget>
-             <widget class="QCheckBox" name="checkBox_Considering">
-              <property name="geometry">
-               <rect>
-                <x>10</x>
-                <y>70</y>
-                <width>111</width>
-                <height>17</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Considering</string>
-              </property>
-             </widget>
-             <widget class="QCheckBox" name="checkBox_Interest">
-              <property name="geometry">
-               <rect>
-                <x>100</x>
-                <y>10</y>
-                <width>101</width>
-                <height>17</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Interest</string>
-              </property>
-             </widget>
-             <widget class="QCheckBox" name="checkBox_Any">
-              <property name="geometry">
-               <rect>
-                <x>10</x>
-                <y>10</y>
-                <width>71</width>
-                <height>17</height>
-               </rect>
-              </property>
-              <property name="toolTip">
-               <string>Don't care logic</string>
-              </property>
-              <property name="text">
-               <string>Any</string>
-              </property>
-             </widget>
             </widget>
-            <widget class="QLabel" name="label_co_in_list">
+            <widget class="QSpinBox" name="spinBoxN">
              <property name="geometry">
               <rect>
-               <x>10</x>
+               <x>280</x>
                <y>60</y>
-               <width>151</width>
-               <height>16</height>
+               <width>42</width>
+               <height>22</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="spinBoxM">
+             <property name="geometry">
+              <rect>
+               <x>280</x>
+               <y>90</y>
+               <width>42</width>
+               <height>22</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="pushButton">
+             <property name="geometry">
+              <rect>
+               <x>280</x>
+               <y>120</y>
+               <width>75</width>
+               <height>23</height>
               </rect>
              </property>
              <property name="text">
-              <string>N Companies in list</string>
+              <string>PushButton</string>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="checkBox_3D">
+             <property name="geometry">
+              <rect>
+               <x>390</x>
+               <y>20</y>
+               <width>68</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="toolTip">
+              <string>Select at least Assessed or Not_Assessed</string>
+             </property>
+             <property name="text">
+              <string>3D</string>
              </property>
             </widget>
            </widget>
           </item>
           <item>
-           <widget class="QFrame" name="frame_Tab">
+           <widget class="QFrame" name="frame_Select_Graph">
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_3">
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
              <item>
-              <widget class="QTabWidget" name="tabWidget">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="currentIndex">
-                <number>0</number>
-               </property>
-               <widget class="QWidget" name="About">
-                <attribute name="title">
-                 <string>About</string>
-                </attribute>
-                <layout class="QVBoxLayout" name="verticalLayout_5">
-                 <property name="rightMargin">
-                  <number>9</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QFrame" name="frame_About_co_name">
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>50</height>
-                    </size>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_7">
-                    <property name="spacing">
-                     <number>0</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QLabel" name="label_Co_Name">
-                      <property name="font">
-                       <font>
-                        <pointsize>12</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Name</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="label_Co_GICS">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>50</weight>
-                        <bold>false</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>GICS Sector</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="label_http">
-                      <property name="text">
-                       <string>http:</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QFrame" name="frame_About">
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_4">
-                    <property name="spacing">
-                     <number>0</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QTextEdit" name="text_About">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QFrame" name="frame">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <layout class="QHBoxLayout" name="horizontalLayout">
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QPushButton" name="pushButton_About">
-                      <property name="maximumSize">
-                       <size>
-                        <width>80</width>
-                        <height>16777215</height>
-                       </size>
-                      </property>
-                      <property name="layoutDirection">
-                       <enum>Qt::LeftToRight</enum>
-                      </property>
-                      <property name="text">
-                       <string>Edit</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <spacer name="horizontalSpacer">
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>185</width>
-                        <height>13</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-               <widget class="QWidget" name="Announce">
-                <attribute name="title">
-                 <string>Announce</string>
-                </attribute>
-                <layout class="QVBoxLayout" name="verticalLayout_11">
-                 <item>
-                  <widget class="QFrame" name="frame_Announce">
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_10">
-                    <item>
-                     <widget class="QListWidget" name="list_Announce">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-               <widget class="QWidget" name="tab">
-                <attribute name="title">
-                 <string>Page</string>
-                </attribute>
-               </widget>
-              </widget>
+              <widget class="QWidget" name="GraphSelect" native="true"/>
              </item>
             </layout>
            </widget>
@@ -687,56 +322,6 @@
             </layout>
            </widget>
           </item>
-          <item>
-           <widget class="QFrame" name="frame_Messages">
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>150</height>
-             </size>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_6">
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <item>
-              <widget class="QProgressBar" name="progressBar">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>15</height>
-                </size>
-               </property>
-               <property name="value">
-                <number>0</number>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QListWidget" name="listMessages">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
          </layout>
         </widget>
        </item>
@@ -784,16 +369,9 @@
     <addaction name="separator"/>
     <addaction name="actionAbout"/>
    </widget>
-   <widget class="QMenu" name="menuAnalysis">
-    <property name="title">
-     <string>Anaylis</string>
-    </property>
-    <addaction name="actionWatched_Select"/>
-   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
    <addaction name="menuView"/>
-   <addaction name="menuAnalysis"/>
    <addaction name="menuHelp"/>
   </widget>
   <action name="actionASX_Listed_Companies">

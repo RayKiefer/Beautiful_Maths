@@ -60,8 +60,24 @@ class win_main(QtWidgets.QMainWindow,Ui_win_main):
     self.show() #show the GUI now so user can see initialiasation as can take several seconds
     ###### Class objects init ######
     #g.init() # Global
+    ### Object to del at close/exit
+    ###### Initialise GUI/program ######
+    ###### Signals and Slots ######
+    ### Menus
+    ### frame_Select 
+    # Combo Boxes
+    ### frame_Select_Graph
+    ### frame_Graph
+    
+    ### Notes  
+    #END of __init__
+    print(f"win_main time={time.time()-time_start:.2f}")
 
-
+  def updateProgressBar(self, val):
+    self.progressBar.setValue(int(val))
+  def message_box(self,s):
+    self.listMessages.addItem(s)
+    self.listMessages.scrollToBottom()
   def closeEvent(self, event):
     del self.help_help_thread
     print("Closing win_main and associated windows")
